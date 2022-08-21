@@ -1,9 +1,13 @@
+
+
 #container {
     display: flex;
     align-content: center;
     flex-direction: column;
     align-items: center;
-    
+    background-image: url('./back1.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
 }
 
 #numberInput {
@@ -12,26 +16,67 @@
     border-radius: 1000px;
     font-weight: bold;
     font-size: 30px;
+    background: #19abb0;
 }
 
 #title{
+    font-size: 50px;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: aquamarine;
 }
 
-.wrap {
-    height: 100%;
-    display: flex;
+#title,h3{
+    color: aquamarine;
+}
+
+.menu {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(23, 40, 79));
+    height: 100vh;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: 3px;
+    z-index: 2;
+    outline: none;
+    }
+
+.avatar,.h2{
+    font-size: 20px;
     align-items: center;
-    justify-content: center;
+    color: rgb(71, 216, 227);
+}
+
+.by,.h2 {
+    font-size: 20px;
+    align-items: center;
+    color: rgb(71, 216, 227);
+}
+
+img {
+    width: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 10px solid rgb(110, 203, 186);
+    box-shadow: 0 0 0 8px rgba(125, 204, 208, 0.2);
+}
+
+.avatar {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2em 0.5em;
+    text-align: center;
+}
+
+.by{
+    background: rgba(14, 4, 56, 0.1);
+        padding: 2em 0.5em;
+        text-align: center;
 }
 
 .btn {
     min-width: 300px;
     min-height: 60px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 22px;
-    text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
     color: #313133;
@@ -40,7 +85,7 @@
     border: none;
     border-radius: 1000px;
     box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
-    transition: all 0.3s ease-in-out 0s;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
     outline: none;
     position: relative;
@@ -59,17 +104,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: all .3s ease-in-out 0s;
+    transition: 0.3s ease-in-out;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover,.btn:focus {
     color: #313133;
     transform: translateY(-6px);
 }
 
-.btn:hover::before,
-.btn:focus::before {
+.btn:hover::before,.btn:focus::before {
     opacity: 1;
 }
 
@@ -87,36 +130,23 @@
     animation: ring 1.5s infinite;
 }
 
-.btn:hover::after,
-.btn:focus::after {
+.btn:hover::after,.btn:focus::after {
     animation: none;
     display: none;
 }
 
-@keyframes ring {
-    0% {
-        width: 30px;
-        height: 30px;
-        opacity: 1;
-    }
-
-    100% {
-        width: 300px;
-        height: 300px;
-        opacity: 0;
-    }
-}
-
 .grid {
     display: grid;
-    height: 500px;
-    width: 500px;
-    background: LightGray;
+    height: 800px;
+    width: 800px;
+    background: url('./back1.jpg');
     grid-template-columns: repeat(var(--numberOfBlocks), 1fr);
 /* //Fr is a fractional unit and 1fr is for 1 part of the available space */
     grid-template-rows: repeat(auto-fill, 1fr);
+    
 }
 
 .gridBlock {
     border: 1px solid black;
+    border-radius: 5px;
 }
