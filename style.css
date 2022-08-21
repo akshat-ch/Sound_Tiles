@@ -107,21 +107,15 @@
     }
 }
 
-.sketch {
+.grid {
     display: grid;
     height: 500px;
     width: 500px;
     background: LightGray;
     grid-template-columns: repeat(var(--numberOfBlocks), 1fr);
+/* //Fr is a fractional unit and 1fr is for 1 part of the available space */
     grid-template-rows: repeat(auto-fill, 1fr);
-
-
 }
-
-.gridBlock1:selected .gridBlock1[selected] {
-    border: 1px solid black;
-}
-
 
 .gridBlock {
     border: 1px solid black;
