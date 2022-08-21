@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 
 #container {
     display: flex;
@@ -136,14 +139,17 @@ img {
 }
 
 .grid {
+    margin-bottom: 2px;
     display: grid;
-    height: 800px;
+    position: relative;
+    height: 650px;
     width: 800px;
     background: url('./back1.jpg');
     grid-template-columns: repeat(var(--numberOfBlocks), 1fr);
 /* //Fr is a fractional unit and 1fr is for 1 part of the available space */
     grid-template-rows: repeat(auto-fill, 1fr);
-    
+    background-image: url("./cat.gif");
+    background-repeat: no-repeat;
 }
 
 .gridBlock {
