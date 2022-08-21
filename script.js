@@ -13,7 +13,7 @@ function getBlocksNumber() {
 function rand(input) {
     let i = 0;
     if (input != 7) {
-        ni = input;
+        i = input;
     }
     let rnum = Math.floor(Math.random() * (8-i)) + i;
     return rnum;
@@ -41,7 +41,8 @@ function setNumberOfBlocks() {
         let block = document.createElement("div");
         block.classList.add("gridBlock");
         block.addEventListener("mouseenter", function(){
-      // for generating random color on hover
+      // generate random color then change it for each tile hover
+      // colorHash is string type
     var colorHash = "#" + Math.floor(Math.random()*16777215).toString(16);
     console.log("Hash value generated: " + colorHash);
     block.style.backgroundColor = colorHash;
@@ -50,6 +51,9 @@ function setNumberOfBlocks() {
     trackNum = rand(trackNum);
     //   block.addEventListener(randAu);
         })
+        // block.addEventListener("mouseleave", function(){
+        //     this.classList.add("clear");
+        // })
         grid.appendChild(block);
     }
 }
